@@ -28,7 +28,7 @@ $ hypercorn server:predict
 Done
 
 ```sh
-curl localhost:8000
+$ curl localhost:8000 ...
 ```
 
 ### Design
