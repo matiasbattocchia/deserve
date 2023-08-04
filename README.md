@@ -21,18 +21,19 @@ $ pip install hypercorn
 
 ### Quickstart
 
+This example uses a [HuggingFace](https://huggingface.co/docs/transformers/quicktour) model.
+
 ```py
 # Save this as example.py
 import deserve
+from transformers import pipeline
 
-model = ... # Load your model
+# Load your model
+classifier = pipeline('sentiment-analysis')
 
 @deserve
-async def predict(request: object) -> object:
-  ... # Preprocess input
-  output = model.predict(input)
-  ... # Postprocess output
-  return response
+async def predict(payload: object) -> object:
+    return classifier(payload)
 ```
 
 Run the server using the names of your file (`example.py`) and function (`predict`).
@@ -42,3 +43,12 @@ $ hypercorn example:predict
 
 [INFO] Running on http://127.0.0.1:8000
 ```
+
+Get some predictions.
+
+```sh
+$ curl localhost:8000 --date '["This is the Deserve nanoframework.", "You deserve it!"]'
+
+[{"label": "POSITIVE", "score": 0.799}, {"label": "POSITIVE", "score": 0.998}]
+```
+
