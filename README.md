@@ -1,6 +1,6 @@
 # Deserve
 
-🏅 Deserve is a nanoframework for serving ML models. Flasker than Flask, faster than FastAPI, 🏅 Deserve is asynchronous, lightweight and simple.
+🏆 Deserve is a nanoframework for serving ML models. Flasker than Flask, faster than FastAPI, 🏆 Deserve is asynchronous, lightweight and simple.
 
 ### Features
 
