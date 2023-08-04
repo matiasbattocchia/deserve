@@ -2,11 +2,27 @@
 
 Deserve is a nanoframework for serving ML models. Flasker than Flask, faster than FastAPI, Deserve is asynchronous, lightweight and simple.
 
+### Features
+
+* 🤙 Remote procedure call (RPC) architecture. There are no endpoints, methods, paths, nor resource to make decisions about — just the `host`:`port`.
+* 📦 Send JSON, receive JSON. Accept a Python object, return an object. Conversions happen under the hood.
+
+### Installing
+
+```sh
+$ pip install deserve
+```
+
+Also install an ASGI server such as [Uvicorn](https://www.uvicorn.org) or [Hypercorn](https://pgjones.gitlab.io/hypercorn).
+
+```sh
+$ pip install hypercorn
+```
+
 ### Quickstart
 
-In a file `server.py`
-
 ```py
+# Save this as example.py
 import deserve
 
 model = ... # Load your model
@@ -19,19 +35,10 @@ async def predict(request: object) -> object:
   return response
 ```
 
-With an ASGI web server of your choice
+Run the server using the names of your file (`example.py`) and function (`predict`).
 
 ```sh
 $ hypercorn server:predict
+
+[INFO] Running on http://127.0.0.1:8000
 ```
-
-Done
-
-```sh
-$ curl localhost:8000 ...
-```
-
-### Design
-
-* Remote procedure call (RPC) architecture
-* JSON in, JSON out
