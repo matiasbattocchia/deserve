@@ -38,7 +38,7 @@ async def predict(request: object) -> object:
 Run the server using the names of your file (`example.py`) and function (`predict`).
 
 ```sh
-$ hypercorn server:predict
+$ hypercorn example:predict
 
 [INFO] Running on http://127.0.0.1:8000
 ```
