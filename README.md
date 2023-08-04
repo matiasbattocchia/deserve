@@ -4,8 +4,8 @@ Deserve is a nanoframework for serving ML models. Flasker than Flask, faster tha
 
 ### Features
 
-* 🤙 Remote procedure call (RPC) architecture. There are no endpoints, methods, paths, nor resource to make decisions about — just the `host`:`port`.
-* 📦 Send JSON, receive JSON. Accept a Python object, return an object. Conversions happen under the hood.
+* 🤙 Remote procedure call (RPC) architecture. There are no endpoints, methods, paths, nor resources to make decisions about — just the `host`:`port`.
+* 📦 Send JSON, receive JSON, client-side. Accept a Python object, return an object, server-side. Conversions happen under the hood.
 
 ### Installing
 
