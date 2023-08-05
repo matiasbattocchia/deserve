@@ -21,7 +21,7 @@ $ pip install hypercorn
 
 ### Quickstart
 
-This example uses a [HuggingFace](https://huggingface.co/docs/transformers/quicktour) model.
+This example uses the [🤗 Transformers](https://huggingface.co/docs/transformers/quicktour) library.
 
 ```py
 # Save this as example.py
@@ -47,7 +47,7 @@ $ hypercorn example:predict
 Get some predictions.
 
 ```sh
-$ curl localhost:8000 --date '["This is the Deserve nanoframework.", "You deserve it!"]'
+$ curl localhost:8000 --data '["This is the simplest framework.", "You deserve it!"]'
 
 [{"label": "POSITIVE", "score": 0.799}, {"label": "POSITIVE", "score": 0.998}]
 ```
