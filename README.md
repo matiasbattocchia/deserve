@@ -52,3 +52,25 @@ $ curl localhost:8000 --data '["This is the simplest framework.", "You deserve i
 [{"label": "POSITIVE", "score": 0.799}, {"label": "POSITIVE", "score": 0.998}]
 ```
 
+### Serialization and deserialization
+
+Deserve takes care of converting the request and response payloads based on the **content-type** and **accept** headers of the request.
+
+List of supported **content-types** and the deserialized payload that is passed to the inference handler.
+
+| content-type | Payload |
+| ------------ | ------- |
+| application/json | `dict`/`list` |
+| text/* | raw |
+| image/* | binary |
+| audio/* | binary |
+
+List of supported **accept** headers and the serialized payload that is returned.
+
+| accept | Payload |
+| ------ | ------- |
+| application/json | JSON |
+| text/* | raw |
+| image/* | binary |
+| audio/* | binary |
+
