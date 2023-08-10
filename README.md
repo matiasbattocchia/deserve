@@ -8,6 +8,7 @@ Deserve is a nanoframework for serving ML models. Flasker than Flask, faster tha
 
 * 🤙 Remote procedure call (RPC) architecture. There are no endpoints, methods, paths, nor resources to make decisions about — just the `host`:`port`.
 * 📦 Send JSON, receive JSON, client-side. Accept a Python object, return an object, server-side. Conversions happen under the hood.
+* 🛩️ No dependencies, less than 70 lines of code.
 
 ### Installing
 
@@ -38,7 +39,7 @@ async def predict(payload: object) -> object:
     return classifier(payload)
 ```
 
-Run the server using the names of your file (`example.py`) and function (`predict`).
+Run the server using the names of your file (`example.py`) and handler function (`predict`).
 
 ```sh
 $ hypercorn example:predict
@@ -58,7 +59,7 @@ $ curl localhost:8000 --data '["This is the simplest framework.", "You deserve i
 
 Deserve takes care of converting the request and response payloads based on the **content-type** and **accept** headers of the request.
 
-List of supported **content-types** and the deserialized payload that is passed to the inference handler.
+List of supported **content-types** and the deserialized payload that is passed to the handler.
 
 | content-type | Payload |
 | ------------ | ------- |
