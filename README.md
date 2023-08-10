@@ -1,4 +1,6 @@
-# Deserve
+![Deserve](./deserve-logo.svg)
+
+# Deserve ![example workflow](https://github.com/matiasbattocchia/deserve/actions/workflows/test.yml/badge.svg) ![example workflow](https://github.com/matiasbattocchia/deserve/actions/workflows/publish.yml/badge.svg)
 
 Deserve is a nanoframework for serving ML models. Flasker than Flask, faster than FastAPI, Deserve is asynchronous, lightweight and simple.
 
